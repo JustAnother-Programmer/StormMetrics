@@ -3,7 +3,9 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
+
 const app = express()
+const port = process.env.PORT || 3000
 
 const publicDir = path.join(__dirname, '../public')
 const templatesDir = path.join(__dirname, '../templates/views')
@@ -43,7 +45,7 @@ app.get('/weather', (req, res) => {
             })
         }
         
-        forecast(latitude, longitude, (error, { temperature, feelslike, weatherdescription, wind_speed, wind_dir } = {}) => {
+        forecast(latitude, longitude, (error, { temperature, feelslike, weatherdescription, wind_speed, wind_dir, pressure } = {}) => {
             if(error){
                 return res.send({
                     error: 'Something went wrong! ' + error 
@@ -57,7 +59,8 @@ app.get('/weather', (req, res) => {
                 feelslike,
                 weatherdescription,
                 wind_speed,
-                wind_dir
+                wind_dir,
+                pressure
             })
         })
     })
@@ -82,6 +85,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server Started!')
+app.listen(port, () => {
+    console.log('Server Started! Using port ' + port + '...')
 })
