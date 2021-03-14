@@ -1,2 +1,2 @@
-# StormMetrics-Server
-Express Server for my StormMetrics Application
+# StormMetrics
+A simple weather application.
