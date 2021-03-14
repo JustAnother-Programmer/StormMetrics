@@ -1,0 +1,25 @@
+{
+  "name": "stormmetrics-server",
+  "version": "1.0.0",
+  "description": "Express Server for my StormMetrics Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustAnother-Programmer/StormMetrics-Server.git"
+  },
+  "keywords": [],
+  "author": "JustAnother-Programmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustAnother-Programmer/StormMetrics-Server/issues"
+  },
+  "homepage": "https://github.com/JustAnother-Programmer/StormMetrics-Server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "request": "^2.88.2"
+  }
+}
