@@ -1,2 +1,2 @@
-# StormMetrics-Server
+# StormMetrics
 A simple weather application.
