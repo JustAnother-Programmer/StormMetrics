@@ -1,11 +1,11 @@
 {
   "name": "stormmetrics-server",
   "version": "1.0.0",
-  "description": "Express Server for my StormMetrics Application",
+  "description": "StormMetrics Application",
   "main": "index.js",
   "scripts": {
-    "start": "node src/main.js",
-    "development": "nodemon src/main.js -e js,hbs"
+    "start": "node src/server.js",
+    "development": "nodemon src/server.js -e js,hbs"
   },
   "repository": {
     "type": "git",

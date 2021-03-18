@@ -15,7 +15,8 @@ const forecast = (latitude, longitude, callback) => {
                 weatherdescription: body.current.weather_descriptions[0],
                 wind_speed: body.current.wind_speed,
                 wind_dir: body.current.wind_dir,
-                pressure: body.current.pressure
+                pressure: body.current.pressure,
+                weathericon: body.current.weather_icons[0]
             })
         }
     })

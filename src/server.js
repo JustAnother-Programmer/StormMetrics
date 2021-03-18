@@ -45,15 +45,16 @@ app.get('/weather', (req, res) => {
             })
         }
         
-        forecast(latitude, longitude, (error, { temperature, feelslike, weatherdescription, wind_speed, wind_dir, pressure } = {}) => {
+        forecast(latitude, longitude, (error, { temperature, feelslike, weatherdescription, wind_speed, wind_dir, pressure, weathericon } = {}) => {
             if(error){
                 return res.send({
                     error: 'Something went wrong! ' + error 
                 })
             }
-
+            
             return res.send({
                 address: req.query.address,
+                weathericon,
                 location,
                 temperature,
                 feelslike,
